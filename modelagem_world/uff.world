@@ -1,0 +1,39 @@
+<?xml version="1.0"?> 
+<sdf version="1.5">
+  <world name="default">
+    <physics type="ode">
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>100</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.9</erp>
+          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>-1</real_time_update_rate>
+      <!-- <max_step_size>0.0020</max_step_size> -->
+    </physics>
+
+    <model name='heightmap'>
+      <include> 
+	<uri>model://uffmodel3</uri>
+      </include>
+    </model>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="iris">
+      <include>
+        <uri>model://drone_with_camera</uri>
+      </include>
+      <!--<pose>30.7325884 81.862671 13.574212 -0.000417 0.001594 2.071692</pose>--> <!--Frente Bloco D-->
+      <pose>0 0 0 0 0 0</pose> <!--Centroide-->	
+    </model>
+  </world>
+</sdf>
