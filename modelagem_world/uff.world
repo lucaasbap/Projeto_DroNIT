@@ -21,7 +21,7 @@
 
     <model name='heightmap'>
       <include> 
-	<uri>model://uffmodel3</uri>
+	<uri>model://uffmodel</uri>
       </include>
     </model>
 
